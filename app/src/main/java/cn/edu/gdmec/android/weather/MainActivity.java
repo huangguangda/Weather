@@ -93,15 +93,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId ()){
 
-            case R.id.btn_sh://点击的是上海
-                getMap ( 0,R.drawable.cloud_sun );
-                break;
-            case R.id.btn_bj:
-                getMap ( 1,R.drawable.sun );
-                break;
 
-            case R.id.btn_gz:
-                getMap ( 1,R.drawable.clouds );
+            case R.id.btn_bj:
+                getMap ( 0,R.drawable.sun );
+                break;
+            case R.id.btn_gz://点击的是上海
+                getMap ( 1,R.drawable.cloud_sun );
+                break;
+            case R.id.btn_sh:
+                getMap ( 2,R.drawable.clouds );
                 break;
         }
     }
