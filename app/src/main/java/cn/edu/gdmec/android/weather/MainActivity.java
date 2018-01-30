@@ -97,10 +97,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_bj:
                 getMap ( 0,R.drawable.sun );
                 break;
-            case R.id.btn_gz://点击的是上海
+            case R.id.btn_gz:
                 getMap ( 1,R.drawable.cloud_sun );
                 break;
-            case R.id.btn_sh:
+            case R.id.btn_sh://点击的是上海
                 getMap ( 2,R.drawable.clouds );
                 break;
         }
