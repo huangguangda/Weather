@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //解析weather,xml信息
-        InputStream inputStream=getResources ().openRawResource ( R.raw.weather );
+        InputStream inputStream=getResources ().openRawResource ( R.raw.weather2 );
         try {
             List<WeatherInfo> weatherInfos = WeatherService.getInfoFromXml ( inputStream );
             list = new ArrayList<Map<String, String>> (  );

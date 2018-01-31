@@ -1,10 +1,11 @@
 package cn.edu.gdmec.android.weather;
 
 import android.util.Xml;
-
+import com.google.gson.reflect.TypeToken;
+import com.google.gson.Gson;
 import org.xmlpull.v1.XmlPullParser;
-
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,6 +66,18 @@ public class WeatherService {
         }
 
         return weatherInfos;
-
     }
+    /*解析Json文件 返回天气信息集合*/
+    public static List<WeatherInfo> getInfosFromJson(InputStream is) throws Exception{
+        byte[] buffer = new byte[is.available ()];
+        is.read (buffer);
+        String json=new String ( buffer, "utf-8" );
+        //使用gson进行解析
+        Gson gson = new Gson();
+        Type ListType = new TypeToken<List<WeatherInfo>>(){}.getType();
+        List<WeatherInfo> weatherInfos = gson.fromJson(json, listType);
+
+        return weatherInfos;
+    }
+
 }
